@@ -1,9 +1,26 @@
-let money = 'Привет мир!';
-let income = 1000000000;
-let addExpenses = 200000;
-let deposit = 100000;
-let mission = 'Я хочу выучить JS';
-let period = 4;
+let money = 30000;
+let income = 'фриланс';
+let addExpenses = 'ИНТЕРНЕТ, ТаКси, коММуналка';
+let deposit = true;
+let mission = 1000000;
+let period = 7;
 
-alert(money);
-console.log(period);
+// typeof
+console.log(typeof money);
+console.log(typeof income);
+console.log(typeof deposit);
+
+//length
+console.log(addExpenses.length);
+
+//Period and objective
+console.log('Период равен', period + ' месяцев');
+console.log('Цель заработать', mission + ' долларов');
+
+//toLowerCase
+let string = addExpenses.toLowerCase();
+console.log(string.split(', '));
+
+//budgetDay
+let budgetDay = money / 30;
+console.log(budgetDay);

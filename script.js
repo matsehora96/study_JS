@@ -18,8 +18,8 @@ console.log('Период равен', period + ' месяцев');
 console.log('Цель заработать', mission + ' долларов');
 
 //toLowerCase
-let string = addExpenses.toLowerCase();
-console.log(string.split(', '));
+let lowerString = addExpenses.toLowerCase();
+console.log(lowerString.split(', '));
 
 //budgetDay
 let budgetDay = money / 30;

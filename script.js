@@ -29,8 +29,7 @@ showTypeOf(income);
 showTypeOf(deposit);
 
 //addExpenses
-let lowerString = addExpenses.toLowerCase();
-console.log(lowerString.split(', '));
+console.log(addExpenses.toLowerCase().split(', '));
 
 let expenses = [];
 //getExpensesMonth
@@ -59,14 +58,12 @@ const getAccumulatedMonth = function(){
     return money - expensesAmount;
 }
 
-let accumulatedMonth = getAccumulatedMonth();
-
 //getTargetMonth
 const getTargetMonth = function(){
-    if (accumulatedMonth === 0){
+    if (getAccumulatedMonth() === 0){
         return 0
     } else {
-        return mission / accumulatedMonth;
+        return mission / getAccumulatedMonth();
     }  
 }
 
@@ -75,7 +72,7 @@ console.log('Цель будет достигнута за:', Math.ceil(getTarge
 
 
 //budgetDay
-let budgetDay = accumulatedMonth / 30;
+let budgetDay = getAccumulatedMonth() / 30;
 console.log('Бюджет на день:', Math.floor(budgetDay))
 
 //getStatusIncome
@@ -90,5 +87,5 @@ const getStatusIncome = function(moneyDay){
         return ('Что то пошло не так');
     }
 }
-let statusIncome = getStatusIncome(budgetDay);
-console.log(statusIncome);
+
+console.log(getStatusIncome(budgetDay));
